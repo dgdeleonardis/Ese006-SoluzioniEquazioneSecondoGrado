@@ -4,23 +4,23 @@
 #include "funzioni.h"
 
 int main(int argc, char** argv) {
-    float a, b, c, soluzioneuno, soluzionedue;
-    int onaco;
-    printf("Inserisci il valore di a");
+    float a, b, c, soluzioneUno, soluzioneDue;
+    int verificaSoluzioni;
+    printf("Inserisci il valore di a : ");
     scanf("%f", &a);
-    printf("Inserisci il valore di b");
+    printf("Inserisci il valore di b : ");
     scanf("%f", &b);
-    printf("Inserisci il valore di c");
+    printf("Inserisci il valore di c : ");
     scanf("%f", &c);
-    onaco = esistonoSoluzioniReali(a,b,c);
-    if (onaco) {
-        esistonoSoluzioniReali(a , b, c);
-    soluzioneuno = calcolaSoluzioneUno(a, b, c);
-    soluzionedue = calcolaSoluzioneDue(a, b, c);
-    printf("Le soluzioni sono %5.2f e %5.2f", soluzioneuno, soluzionedue);
+    verificaSoluzioni = esistonoSoluzioniReali(a ,b ,c);
+    if (verificaSoluzioni) {
+        esistonoSoluzioniReali(a ,b, c);
+    soluzioneUno = calcolaSoluzioneUno(a ,b ,c);
+    soluzioneDue = calcolaSoluzioneDue(a ,b ,c);
+    printf("Le soluzioni sono %5.2f e %5.2f\n", soluzioneUno, soluzioneDue);
     }
     else {
-        printf("niente");
+        printf("L'equazione non ha soluzioni reali\n");
     }
     return (EXIT_SUCCESS);
 }
