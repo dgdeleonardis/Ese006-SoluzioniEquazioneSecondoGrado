@@ -32,3 +32,7 @@ float calcolaSoluzioneDue(float a, float b, float c) {
     soluzioneDue = (- b - sqrt(delta)) / (2*a);
     return soluzioneDue;
 }
+
+void stampaSoluzioni(float soluzioneUno, float soluzioneDue) {
+    printf("Le soluzioni sono %5.2f e %5.2f\n", soluzioneUno, soluzioneDue);
+}
